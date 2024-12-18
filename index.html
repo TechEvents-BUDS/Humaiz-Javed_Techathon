@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Health Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>AI Health Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#signup">Sign Up</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+                <a href="#forgot-password">Forgot Password?</a>
+            </form>
+        </section>
+
+        <section id="signup">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+
+        <section id="dashboard">
+            <h2>Your Health Dashboard</h2>
+            <div class="health-metrics">
+                <p>Welcome to your health dashboard! Please log in to see your metrics.</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#personal-records">Personal Health Records</a></li>
+                    <li><a href="#symptom-tracking">Symptom Tracking</a></li>
+                    <li><a href="#recommendations">Recommendations</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="personal-records">
+            <h2>Personal Health Records</h2>
+            <form id="recordForm">
+                <input type="text" placeholder="Medical History" required>
+                <button type="submit">Save Record</button>
+            </form>
+            <div class="records-list">
+                <h3>Saved Records:</h3>
+                <ul id="recordsOutput"></ul>
+            </div>
+        </section>
+
+        <section id="symptom-tracking">
+            <h2>Symptom Tracking</h2>
+            <form id="symptomForm">
+                <input type="text" placeholder="Current Symptoms" required>
+                <button type="submit">Track Symptoms</button>
+            </form>
+            <div class="symptom-trends">
+                <h3>Tracked Symptoms:</h3>
+                <ul id="symptomsOutput"></ul>
+                <canvas id="symptomChart" width="400" height="200"></canvas>
+            </div>
+        </section>
+
+        <section id="recommendations">
+            <h2>AI Recommendations</h2>
+            <div class="recommendations-list">
+                <p>AI-generated recommendations will appear here based on your data.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 AI Health Tracker. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
